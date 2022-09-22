@@ -76,11 +76,11 @@
 	</dependencyManagement>
 
 	<distributionManagement>
-		<repository>
-			<id>github</id>
-			<name>Test sentry package</name>
-			<url>https://maven.pkg.github.com/rakeshjosethomas/test-sentry</url>
-		</repository>
+			<repository>
+				<id>github</id>
+				<name>Test sentry package</name>
+				<url>https://maven.pkg.github.com/rakeshjosethomas/test-sentry</url>
+			</repository>
 	</distributionManagement>
 
 	<build>
