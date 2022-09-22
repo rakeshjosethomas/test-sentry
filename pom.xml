@@ -83,6 +83,23 @@
 			</repository>
 	</distributionManagement>
 
+	<developers>
+		<developer>
+			<name>Rakesh Jose Thomas</name>
+			<email>rakesh.thomas@apicasystems.com</email>
+			<organization>com.apicasystems</organization>
+			<organizationUrl>https://github.com/rakeshjosethomas/test-sentry</organizationUrl>
+		</developer>
+	</developers>
+
+	<scm>
+		<connection>scm:git:git://github.com/rakeshjosethomas/test-sentry.git</connection>
+		<developerConnection>scm:git:https://github.com/rakeshjosethomas/test-sentry.git
+		</developerConnection>
+		<url>https://github.com/rakeshjosethomas/test-sentry</url>
+		<tag>test-sentry</tag>
+	</scm>
+
 	<build>
 		<plugins>
 			<plugin>
