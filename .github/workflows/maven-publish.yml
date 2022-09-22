@@ -35,7 +35,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ github.token }}
     - name: Bump Version
-      if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+#      if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
       id: bump
       uses: nnichols/maven-version-bump-action@v3
       with:
