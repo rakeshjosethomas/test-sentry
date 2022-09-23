@@ -9,7 +9,7 @@
 	</parent>
 	<groupId>com.apica</groupId>
 	<artifactId>test-sentry</artifactId>
-	<version>0.0.15</version>
+	<version>0.0.15-SNAPSHOT</version>
 	<name>test-sentry</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
@@ -96,7 +96,7 @@
 		<developerConnection>scm:git:https://github.com/rakeshjosethomas/test-sentry.git
 		</developerConnection>
 		<url>https://github.com/rakeshjosethomas/test-sentry</url>
-		<tag>test-sentry-0.0.15</tag>
+		<tag>test-sentry-0.0.2</tag>
 	</scm>
 
 	<build>
