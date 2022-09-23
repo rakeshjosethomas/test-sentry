@@ -9,7 +9,7 @@
 	</parent>
 	<groupId>com.apica</groupId>
 	<artifactId>test-sentry</artifactId>
-	<version>0.0.12-SNAPSHOT</version>
+	<version>0.0.13-SNAPSHOT</version>
 	<name>test-sentry</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
