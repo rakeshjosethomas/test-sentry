@@ -25,18 +25,21 @@ jobs:
         distribution: 'temurin'
         server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
         settings-path: ${{ github.workspace }} # location for the settings.xml file
+    - name: Configure GIT
+      if: ${{ github.event_name == 'pull_request' }}
+      run: |
+        git config --global user.name 'Rakesh Jose Thomas'
+        git config --global user.email 'rakesh.thomas@apicasystems.com'
+        git config pull.rebase false
+        git pull origin ${{ github.head_ref }} --allow-unrelated-histories
     - name: Bump version
       if: ${{ github.event_name == 'pull_request' }}
       run: mvn validate -DbumpPatch
     - name: Commit changes
       if: ${{ github.event_name == 'pull_request' }}
       run: |
-        git config --global user.name 'Rakesh Jose Thomas'
-        git config --global user.email 'rakesh.thomas@apicasystems.com'
-        git config pull.rebase false
         git add pom.xml
         git commit -m "Bumps version"
-        git pull origin ${{ github.head_ref }} --allow-unrelated-histories
         git push origin ${{ github.head_ref }}
       env:
         GITHUB_TOKEN: ${{ github.token }}
