@@ -13,7 +13,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
       packages: write
 
     steps:
@@ -30,8 +30,10 @@ jobs:
       run: |
         git config --global user.name 'Rakesh Jose Thomas'
         git config --global user.email 'rakesh.thomas@apicasystems.com'
-        git config pull.rebase false
-        git pull origin ${{ github.head_ref }} --allow-unrelated-histories
+        git fetch
+        git checkout ${{ github.head_ref }}
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
     - name: Bump version
       if: ${{ github.event_name == 'pull_request' }}
       run: mvn validate -DbumpPatch
