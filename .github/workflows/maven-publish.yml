@@ -29,6 +29,7 @@ jobs:
 
     - name: Bump version
       run: mvn validate -DbumpPatch
+      if: ${{ github.event_name == 'push' }}
 
     - name: Commit changes
       run: |
@@ -39,6 +40,7 @@ jobs:
         git push origin main
       env:
         GITHUB_TOKEN: ${{ github.token }}
+      if: ${{ github.event_name == 'push' }}
 
     - name: Build with Maven
       run: mvn -B package --file pom.xml
