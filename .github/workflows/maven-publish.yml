@@ -11,7 +11,7 @@ on:
 
 jobs:
   bump-version:
-    if: ${{ github.event_name == 'push' }}
+    if: github.event_name == 'push'
     runs-on: ubuntu-latest
     permissions:
       contents: write
